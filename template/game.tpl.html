@@ -1,0 +1,7 @@
+<div class="game">
+	<div ng-repeat="row in model track by $index" class="row">
+		<div ng-repeat="elem in row track by $index" class="col" ng-click="clickHandler($parent.$index, $index)" ng-class="elem.show ? 'clicked' : null">
+			<span ng-if="elem.show && elem.neighbourCnt > 0" ng-bind="elem.neighbourCnt"></span>
+		</div>
+	</div>
+</div>
